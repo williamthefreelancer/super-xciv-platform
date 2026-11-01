@@ -6,8 +6,6 @@ use App\Http\Controllers\EventDynamicController;
 use App\Http\Controllers\EventTicketController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
@@ -34,15 +32,8 @@ Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterController::class, 'create'])->name('register');
     Route::post('/register', [RegisterController::class, 'store']);
 });
-Route::get('/login', function () {
-    return redirect()->route('home');
-})->name('login');
-Route::post('/login', function () {
-    return redirect()->route('home');
-})->middleware('throttle:5,1');
-
 Route::middleware('auth')->group(function () {
-    Route::post('/logout', [SessionController::class, 'destroy'])->name('logout');
+    Route::post('/logout', [\App\Http\Controllers\SessionController::class, 'destroy'])->name('logout');
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
     Route::middleware('can:manage-pages')->prefix('dashboard')->group(function () {
