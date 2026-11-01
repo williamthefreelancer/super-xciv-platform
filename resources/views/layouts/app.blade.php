@@ -13,7 +13,7 @@
 <body class="app-body">
     <header class="site-header">
         <a class="brand" href="{{ route('home') }}" aria-label="{{ config('app.name') }} home">
-            <span class="brand-mark" aria-hidden="true">X</span>
+            <img src="{{ asset('images/the-super-ninety-four-app-white.svg') }}" alt="XCIV" class="brand-logo">
             <span class="brand-name">XCIV</span>
             <span class="brand-divider" aria-hidden="true"></span>
             <span class="brand-caption">HOSPITALITY<br>IN PERSON</span>
