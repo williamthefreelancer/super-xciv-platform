@@ -19,12 +19,10 @@
             <span class="brand-caption">HOSPITALITY<br>IN PERSON</span>
         </a>
         <nav class="primary-nav" aria-label="Main navigation">
-            <a class="nav-link {{ request()->routeIs('home', 'events.*') ? 'nav-link-active' : '' }}" href="{{ route('events.index') }}">Gatherings</a>
-            <a class="nav-link {{ request()->routeIs('communities.*') ? 'nav-link-active' : '' }}" href="{{ route('communities.index') }}">Communities</a>
-            <a class="nav-link {{ request()->routeIs('broadcasts.*') ? 'nav-link-active' : '' }}" href="{{ route('broadcasts.index') }}">Broadcasts</a>
-            <a class="nav-link {{ request()->routeIs('routes.*', 'convoys.*') ? 'nav-link-active' : '' }}" href="{{ route('convoys.index') }}">Convoys</a>
-            <a class="nav-link {{ request()->routeIs('operators') ? 'nav-link-active' : '' }}" href="{{ route('operators') }}">For operators</a>
-            <a class="nav-link {{ request()->routeIs('about') ? 'nav-link-active' : '' }}" href="{{ route('about') }}">About</a>
+            <a class="nav-link {{ request()->routeIs('home') ? 'nav-link-active' : '' }}" href="{{ route('home') }}">Home</a>
+            @auth
+                <a class="nav-link {{ request()->routeIs('dashboard') ? 'nav-link-active' : '' }}" href="{{ route('dashboard') }}">Dashboard</a>
+            @endauth
         </nav>
         <div class="header-actions">
             @auth
@@ -52,7 +50,7 @@
     <footer class="site-footer" id="about">
         <a class="footer-brand" href="{{ route('home') }}">XCIV <span>Hospitality, in person.</span></a>
         <p>A community shaped by the people who bring people together.</p>
-        @if ($footerPages->isNotEmpty())
+        @if (isset($footerPages) && $footerPages->isNotEmpty())
             <nav class="footer-links" aria-label="Footer">
                 @foreach ($footerPages as $footerPage)
                     <a href="{{ route('pages.show', $footerPage) }}">{{ $footerPage->title }}</a>
