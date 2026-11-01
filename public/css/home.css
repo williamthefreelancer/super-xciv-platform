@@ -61,9 +61,31 @@
 
 .home-hero-actions {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+    flex-wrap: nowrap;
+    gap: 0;
     margin-top: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 999px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.home-hero-actions-group {
+    border-radius: 999px;
+}
+
+.home-hero-group-btn {
+    border: 0;
+    border-radius: 0;
+    padding: 13px 28px;
+}
+
+.home-hero-group-btn + .home-hero-group-btn {
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.home-hero-actions .button-quiet {
+    border-color: transparent;
 }
 
 .home-auth-panel {
@@ -256,6 +278,8 @@
 
     .home-hero-actions {
         justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .home-hero-logo {
@@ -274,5 +298,21 @@
 
     .home-form-actions-split {
         grid-template-columns: 1fr;
+    }
+
+    .home-hero-actions {
+        flex-wrap: wrap;
+        border-radius: 999px;
+        max-width: 100%;
+    }
+
+    .home-hero-group-btn {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .home-hero-group-btn + .home-hero-group-btn {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
     }
 }

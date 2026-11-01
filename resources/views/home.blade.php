@@ -15,9 +15,9 @@
                 <img src="{{ asset('images/the-super-ninety-four-app-white.svg') }}" alt="XCIV" class="home-hero-logo">
                 <h1 id="home-hero-title" class="home-hero-title">Hospitality, in person.</h1>
                 <p class="home-hero-subtitle">A community shaped by the people who bring people together. Sign in or join by attendee admission to get started.</p>
-                <div class="home-hero-actions">
-                    <a href="{{ route('login') }}" class="button">Sign in</a>
-                    <a href="#join" class="button button-quiet">Join by admission</a>
+                <div class="home-hero-actions home-hero-actions-group">
+                    <a href="{{ route('login') }}" class="button home-hero-group-btn">Sign in</a>
+                    <a href="#join" class="button button-quiet home-hero-group-btn">Join by admission</a>
                 </div>
             </div>
 
