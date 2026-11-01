@@ -29,17 +29,18 @@
                             <p class="home-panel-lead">Sign in with your club and ID details.</p>
                             <form class="home-form" method="POST" action="{{ route('login') }}" novalidate>
                                 @csrf
-                                <div class="field">
-                                    <label for="club">Select your club</label>
+                                  <div class="field">
+                                    <label for="club">Choose your club</label>
                                     <select id="club" name="club" required>
-                                        <option value="" disabled selected>Select your club</option>
-                                        <option value="general">General</option>
-                                        <option value="hospitality">Hospitality</option>
-                                        <option value="nightlife">Nightlife &amp; clubs</option>
-                                        <option value="event_maker">Event maker</option>
+                                        <option value="" disabled selected>Choose your club or select event</option>
+                                        <option value="800_plus_journeys">The 800 Plus Journeys</option>
+                                        <option value="cultrual_guides_township_adventures">Cultrual Guides of Township Adventures</option>
+                                        <option value="badlands_bra_club">The Badlands Bra Club</option>
+                                        <option value="city_clubs_super_ninety_four">The City Clubs of SUPER NINETY FOUR</option>
+                                        <option value="clubs_wyoma_square_back_creek">The Clubs of Wyoma Square &amp; The Clubs of Back Creek</option>
                                     </select>
                                     <p class="field-hint">Choose the club you're affiliated with.</p>
-                                </div>
+                                  </div>
 
                                 <div class="field">
                                     <label for="participant_id">Participant ID</label>
