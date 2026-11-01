@@ -1,0 +1,193 @@
+/* Dashboard styles */
+.dashboard-hero {
+    position: relative;
+    padding: clamp(2rem, 6vw, 4rem) 0 clamp(3rem, 8vw, 5rem);
+    overflow: hidden;
+}
+
+.dashboard-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top, rgba(212, 233, 137, 0.1) 0%, transparent 60%),
+                linear-gradient(180deg, rgba(129, 91, 90, 0.75) 0%, rgba(27, 19, 19, 0.95) 100%);
+    z-index: 0;
+}
+
+.dashboard-hero .page-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: clamp(2rem, 6vw, 3rem);
+}
+
+.dashboard-title {
+    margin: 0 0 0.75rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.25rem, 6vw, 3.5rem);
+    color: #ffffff;
+}
+
+.dashboard-subtitle {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    max-width: 38rem;
+}
+
+.dashboard-header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 2rem);
+    align-items: start;
+}
+
+.dashboard-card {
+    background: rgba(27, 19, 19, 0.7);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(155, 124, 123, 0.6);
+    box-shadow: 0 40px 60px -40px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.dashboard-card-compact {
+    gap: 0.9rem;
+}
+
+.dashboard-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.dashboard-card-title {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.dashboard-card-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(214, 108, 85, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.dashboard-card-description {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.dashboard-event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dashboard-event-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(155, 124, 123, 0.6);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+}
+
+.dashboard-event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.dashboard-event-name {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #ffffff;
+}
+
+.dashboard-event-meta {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.dashboard-side {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 3vw, 1.5rem);
+}
+
+.dashboard-quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.dashboard-quick-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(155, 124, 123, 0.6);
+    color: #ffffff;
+    text-decoration: none;
+    transition: border-color 160ms ease, background 160ms ease;
+}
+
+.dashboard-quick-link:hover {
+    border-color: rgba(214, 108, 85, 0.9);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.dashboard-status-text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard-event-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-event-item .button {
+        align-self: flex-start;
+    }
+}

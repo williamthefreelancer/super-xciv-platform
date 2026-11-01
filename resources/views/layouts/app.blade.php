@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('styles')
 </head>
 <body class="app-body">
     <header class="site-header">
@@ -48,5 +49,6 @@
             <span class="footer-location">Made for real rooms, everywhere.</span>
         @endif
     </footer>
+    @stack('scripts')
 </body>
 </html>
