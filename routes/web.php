@@ -33,9 +33,13 @@ Route::get('/events/dynamic/{slug}/calendar', [EventTicketController::class, 'ca
 Route::middleware('guest')->group(function () {
     Route::get('/register', [RegisterController::class, 'create'])->name('register');
     Route::post('/register', [RegisterController::class, 'store']);
-    Route::get('/login', [SessionController::class, 'create'])->name('login');
-    Route::post('/login', [SessionController::class, 'store'])->middleware('throttle:5,1');
 });
+Route::get('/login', function () {
+    return redirect()->route('home');
+})->name('login');
+Route::post('/login', function () {
+    return redirect()->route('home');
+})->middleware('throttle:5,1');
 
 Route::middleware('auth')->group(function () {
     Route::post('/logout', [SessionController::class, 'destroy'])->name('logout');
