@@ -3,24 +3,30 @@
 @section('title', 'Hospitality, in person | ' . config('app.name'))
 
 @section('content')
+    <div class="home-hero">
+        <div class="home-hero-bg" aria-hidden="true"></div>
+        <div class="page-wrap">
+            <section class="intro-grid" id="gatherings" aria-labelledby="intro-title">
+                <div class="intro-copy">
+                    <img src="{{ asset('images/logo.svg') }}" alt="XCIV" class="home-hero-logo">
+                    <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> A network for people who host</p>
+                    <h1 id="intro-title">The best connections happen <em>in person.</em></h1>
+                    <p class="intro-description">A trusted community for the people behind hospitality, nightlife, clubs, and live events. Less noise online. More good people in the room.</p>
+                    <a class="text-link" href="{{ route('events.index') }}">Explore the gathering calendar <span aria-hidden="true">&#8594;</span></a>
+                </div>
+
+                <figure class="gathering-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85" alt="A warmly lit restaurant prepared for an evening gathering" fetchpriority="high">
+                    <figcaption>
+                        <span class="image-caption-label">GOOD ROOMS. GOOD PEOPLE.</span>
+                        <span class="image-caption-note">The conversation is better around a table.</span>
+                    </figcaption>
+                </figure>
+            </section>
+        </div>
+    </div>
+
     <div class="page-wrap">
-        <section class="intro-grid" id="gatherings" aria-labelledby="intro-title">
-            <div class="intro-copy">
-                <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> A network for people who host</p>
-                <h1 id="intro-title">The best connections happen <em>in person.</em></h1>
-                <p class="intro-description">A trusted community for the people behind hospitality, nightlife, clubs, and live events. Less noise online. More good people in the room.</p>
-                <a class="text-link" href="{{ route('events.index') }}">Explore the gathering calendar <span aria-hidden="true">&#8594;</span></a>
-            </div>
-
-            <figure class="gathering-image">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85" alt="A warmly lit restaurant prepared for an evening gathering" fetchpriority="high">
-                <figcaption>
-                    <span class="image-caption-label">GOOD ROOMS. GOOD PEOPLE.</span>
-                    <span class="image-caption-note">The conversation is better around a table.</span>
-                </figcaption>
-            </figure>
-        </section>
-
         <section class="gatherings-section" id="upcoming" aria-labelledby="gatherings-title">
             <div class="section-heading">
                 <div>
@@ -44,7 +50,7 @@
                     <span class="empty-mark" aria-hidden="true">&#10022;</span>
                     <div>
                         <h3>The first room is taking shape.</h3>
-                        <p>We’re building the opening calendar with hospitality operators. The aim is simple: useful introductions, thoughtful hosts, and a reason to meet face to face.</p>
+                        <p>We're building the opening calendar with hospitality operators. The aim is simple: useful introductions, thoughtful hosts, and a reason to meet face to face.</p>
                     </div>
                     <span class="empty-state-note">COMING INTO FOCUS</span>
                 </div>

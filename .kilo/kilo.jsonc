@@ -6,5 +6,13 @@
     "model": "mistralai/mistral-embed-2312"
   },
   "mcp": {
+    "github-mcp-server": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
+    "figma": {
+      "type": "remote",
+      "url": "https://mcp.figma.com/mcp"
+    }
   }
 }

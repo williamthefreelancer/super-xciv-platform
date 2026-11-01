@@ -1366,3 +1366,11 @@ h1 em,
         transition-duration: 0.01ms !important;
     }
 }
+
+.form-subtitle { margin: -10px 0 24px; color: var(--muted); font-size: 14px; }
+
+.home-hero { position: relative; padding: 60px 0 40px; overflow: hidden; }
+.home-hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at top, rgba(212, 233, 137, 0.15) 0%, transparent 60%), url('/Home.jpg'); background-size: cover; background-position: center; opacity: 0.6; z-index: 0; }
+.home-hero .page-wrap { position: relative; z-index: 1; }
+.home-hero-logo { height: 60px; width: auto; margin-bottom: 24px; }
+.home-hero .intro-grid { padding-top: 40px; }
