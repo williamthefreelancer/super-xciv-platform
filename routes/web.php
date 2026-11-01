@@ -33,7 +33,12 @@ Route::middleware('guest')->group(function () {
     Route::post('/register', [RegisterController::class, 'store']);
 });
 Route::middleware('auth')->group(function () {
-    Route::post('/logout', [\App\Http\Controllers\SessionController::class, 'destroy'])->name('logout');
+    Route::post('/logout', function () {
+        auth()->logout();
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        return redirect()->route('home');
+    })->name('logout');
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
     Route::middleware('can:manage-pages')->prefix('dashboard')->group(function () {
