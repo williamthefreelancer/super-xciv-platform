@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f4f6f1">
+    <meta name="theme-color" content="#815B5A">
     <title>@yield('title', config('app.name'))</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="app-body">
     <header class="site-header">
         <a class="brand" href="{{ route('home') }}" aria-label="{{ config('app.name') }} home">
             <span class="brand-mark" aria-hidden="true">X</span>
@@ -40,7 +40,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="app-main">
         @if (session('status'))
             <div class="page-wrap">
                 <p class="flash flash-success" role="status">{{ session('status') }}</p>
