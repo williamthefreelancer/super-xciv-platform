@@ -16,9 +16,6 @@
     <header class="site-header">
         <a class="brand" href="{{ route('home') }}" aria-label="{{ config('app.name') }} home">
             <img src="{{ asset('images/the-super-ninety-four-app-white.svg') }}" alt="XCIV" class="brand-logo">
-            <span class="brand-name">XCIV</span>
-            <span class="brand-divider" aria-hidden="true"></span>
-            <span class="brand-caption">HOSPITALITY<br>IN PERSON</span>
         </a>
         <nav class="primary-nav" aria-label="Main navigation">
             <a class="nav-link {{ request()->routeIs('home') ? 'nav-link-active' : '' }}" href="{{ route('home') }}">Home</a>
@@ -35,7 +32,7 @@
                 </form>
             @else
                 <a class="header-link" href="{{ route('login') }}">Log in</a>
-                <a class="button button-small" href="{{ route('register') }}">Join XCIV</a>
+                <a class="button button-small" href="{{ route('register') }}" style="background: #000000; color: #ffffff;">Join XCIV</a>
             @endauth
         </div>
     </header>

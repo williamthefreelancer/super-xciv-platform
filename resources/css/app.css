@@ -75,8 +75,8 @@ a {
 }
 
 .brand-logo {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 2.75rem;
+    height: 2.75rem;
     display: block;
 }
 
@@ -110,7 +110,7 @@ a {
 .nav-link {
     position: relative;
     padding: 34px 0 31px;
-    color: var(--muted);
+    color: #ffffff;
     font-size: 13px;
     text-decoration: none;
     transition: color 180ms ease;
@@ -609,6 +609,7 @@ h1 em,
 .header-link {
     font-size: 13px;
     text-decoration: none;
+    color: #ffffff;
 }
 
 .button {
@@ -616,10 +617,10 @@ h1 em,
     align-items: center;
     justify-content: center;
     padding: 13px 24px;
-    border: 1px solid var(--forest);
+    border: 1px solid #000000;
     border-radius: 999px;
-    background: var(--forest);
-    color: var(--white);
+    background: #000000;
+    color: #ffffff;
     font: inherit;
     font-size: 13px;
     font-weight: 600;
@@ -629,7 +630,7 @@ h1 em,
 }
 
 .button:hover {
-    background: var(--ink);
+    background: #000000;
 }
 
 .button-small {
