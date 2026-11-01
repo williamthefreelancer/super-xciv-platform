@@ -10,7 +10,29 @@
                 <h1 style="font-family: 'Lato', sans-serif; font-weight: 700; color: #ffffff; line-height: 1.2;">This is a heading title<br>with at least 2 lines of text</h1>
                 <a href="#" class="button" style="background: #000000; color: #ffffff; border-color: #000000;">Call to action</a>
             </div>
-            <div></div>
+            <div>
+                <h2 style="font-family: 'Lato', sans-serif; font-weight: 700; color: #ffffff; margin-bottom: 1.5rem;">Sign in to SUPR XCIV</h2>
+                <form style="display: grid; gap: 1rem;">
+                    <div class="field">
+                        <label style="color: #ffffff;">Select your club</label>
+                        <select>
+                            <option value="">Select your club</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label style="color: #ffffff;">Participant ID</label>
+                        <input type="text" placeholder="Participant ID">
+                    </div>
+                    <div class="field">
+                        <label style="color: #ffffff;">Non-member or member ID</label>
+                        <input type="text" placeholder="Non-member or member ID">
+                    </div>
+                    <div class="field">
+                        <label style="color: #ffffff;">Full name</label>
+                        <input type="text" placeholder="Full name">
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 </div>
