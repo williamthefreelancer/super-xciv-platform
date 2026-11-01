@@ -18,7 +18,6 @@
             <img src="{{ asset('images/the-super-ninety-four-app-white.svg') }}" alt="XCIV" class="brand-logo">
         </a>
         <nav class="primary-nav" aria-label="Main navigation">
-            <a class="nav-link {{ request()->routeIs('home') ? 'nav-link-active' : '' }}" href="{{ route('home') }}">Home</a>
             @auth
                 <a class="nav-link {{ request()->routeIs('dashboard') ? 'nav-link-active' : '' }}" href="{{ route('dashboard') }}">Dashboard</a>
             @endauth
