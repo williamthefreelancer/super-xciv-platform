@@ -23,16 +23,6 @@
             @endauth
         </nav>
         <div class="header-actions">
-            @auth
-                <a class="header-link" href="{{ route('dashboard') }}">{{ auth()->user()->name }}</a>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button class="button button-small button-quiet" type="submit">Log out</button>
-                </form>
-            @else
-                <a class="header-link" href="{{ route('login') }}">Log in</a>
-                <a class="button button-small" href="{{ route('register') }}" style="background: #000000; color: #ffffff;">Join XCIV</a>
-            @endauth
         </div>
     </header>
 
