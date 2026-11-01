@@ -32,6 +32,28 @@
                         <input type="text" placeholder="Full name">
                     </div>
                 </form>
+                
+                <h2 style="font-family: 'Lato', sans-serif; font-weight: 700; color: #ffffff; margin-top: 2rem; margin-bottom: 0.5rem;">Join by attendee admission</h2>
+                <p style="color: #ffffff; margin-bottom: 1rem;">Event admission by multi-step form for admission intelligence and by approval.</p>
+                <p style="color: #ffffff; font-size: 0.9rem; margin-bottom: 1rem;">Step 1: Basic | Step 2: Profile | Step 3: Intent</p>
+                <form style="display: grid; gap: 1rem;">
+                    <div class="field">
+                        <label style="color: #ffffff;">Your full name</label>
+                        <input type="text" placeholder="Your full name">
+                    </div>
+                    <div class="field">
+                        <label style="color: #ffffff;">Your phone number</label>
+                        <input type="text" placeholder="Your phone number">
+                    </div>
+                    <div class="field">
+                        <label style="color: #ffffff;">Your email</label>
+                        <input type="email" placeholder="Your email">
+                    </div>
+                    <div class="field">
+                        <label style="color: #ffffff;">Your AGE</label>
+                        <input type="number" placeholder="Your AGE">
+                    </div>
+                </form>
             </div>
         </div>
     </section>
