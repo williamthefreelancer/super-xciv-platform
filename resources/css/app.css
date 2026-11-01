@@ -4,8 +4,8 @@
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'DM Sans', sans-serif;
-    --font-display: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Open Sans', sans-serif;
+    --font-display: 'Lato', sans-serif;
 }
 
 :root {
@@ -34,7 +34,7 @@ body {
     background: linear-gradient(180deg, #815B5A 0%, #1B1313 100%);
     background-attachment: fixed;
     color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
 }
@@ -104,6 +104,7 @@ a {
     display: flex;
     align-items: center;
     gap: 34px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .nav-link {
@@ -113,6 +114,7 @@ a {
     font-size: 13px;
     text-decoration: none;
     transition: color 180ms ease;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .nav-link:hover,
@@ -184,17 +186,10 @@ a {
 h1,
 h2,
 h3,
-p,
-figure {
-    margin-top: 0;
-}
-
-h1,
 .operator-heading h2 {
     margin-bottom: 22px;
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(44px, 5vw, 70px);
-    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     line-height: 1.04;
 }
 
@@ -794,11 +789,8 @@ h1 em,
     font-size: 14px;
 }
 
-.prose p {
-    max-width: 620px;
-    color: var(--ink);
-    font-size: 15px;
-    line-height: 1.75;
+p {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .attendee-list {
@@ -1365,15 +1357,14 @@ h1 em,
     color: var(--ink);
 }
 
-@media (max-width: 1100px) {
-    .primary-nav {
-        flex-wrap: wrap;
-        gap: 4px 20px;
-    }
-
-    .nav-link {
-        padding: 12px 0;
-    }
+.nav-link,
+.primary-nav,
+.header-link,
+.footer-links a,
+.filters select,
+.field select,
+.quick-actions a {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
