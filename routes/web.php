@@ -28,10 +28,6 @@ Route::get('/events/dynamic/{slug}/custom-fields', [EventTicketController::class
 Route::get('/events/dynamic/{slug}/checkin', [EventTicketController::class, 'checkin'])->name('events.dynamic.checkin');
 Route::get('/events/dynamic/{slug}/calendar', [EventTicketController::class, 'calendar'])->name('events.dynamic.calendar');
 
-Route::middleware('guest')->group(function () {
-    Route::get('/register', [RegisterController::class, 'create'])->name('register');
-    Route::post('/register', [RegisterController::class, 'store']);
-});
 Route::middleware('auth')->group(function () {
     Route::post('/logout', function () {
         auth()->logout();
